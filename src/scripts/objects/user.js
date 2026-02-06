@@ -5,10 +5,10 @@ const user = {
     username: '',
     followers: '',
     following: '',
-    language: '',
-    forksCount: '',
-    stargazersCount: '',
-    watchersCount: '',
+    language: [],
+    forksCount: [],
+    stargazersCount: [],
+    watchersCount: [],
     repositories: [],
     setInfo(gitHubUser) {
         this.username = gitHubUser.login
@@ -20,12 +20,13 @@ const user = {
         this.userName = gitHubUser.login
     },
     setRepositories(repositories) {
-        this.language = repositories.language
-        this.forksCount = repositories.forks_count
-        this.stargazersCount = repositories.stargazers_count
-        this.watchersCount = repositories.watchers_count
         this.repositories = repositories
+        this.language = repositories.map(repo => repo.language)
+        this.forksCount = repositories.map(repo => repo.forks_count)
+        this.stargazersCount = repositories.map(repo => repo.stargazers_count)
+        this.watchersCount = repositories.map(repo => repo.watchers_count)
     }
 }
+
 
 export { user }

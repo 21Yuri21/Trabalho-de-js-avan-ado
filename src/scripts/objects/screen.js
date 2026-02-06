@@ -11,12 +11,6 @@ const screen = {
                             <p>Seguidores: ${user.followers}<br> Seguindo: ${user.following}</p>
                             </div>
                             
-                            <div class="seting">
-                               <li>🫕${user.language}</li>
-                               <li>🍴 ${user.forksCount}</li>
-                               <li>⭐ ${user.stargazersCount}</li>
-                               <li> 👀${user.watchersCount}</li>
-                            </div>
 
                        </div>`
 
@@ -27,6 +21,14 @@ const screen = {
             this.userProfile.innerHTML += `<div class="repositories section">
             <h2>Repositórios</h2>
             <ul>${repositoriesItens}</ul>
+
+                            <div class="seting">
+                               <li>🫕 ${user.language}</li>
+                               <li>🍴 ${user.forksCount}</li>
+                               <li>⭐ ${user.stargazersCount}</li>
+                               <li> 👀${user.watchersCount}</li>
+                            </div>
+
             </div>`
 
 
@@ -36,6 +38,8 @@ const screen = {
         this.userProfile.innerHTML = "<h3>Usuário não encontrado</h3>"
     }
 }
+
+
 
 
 export { screen }

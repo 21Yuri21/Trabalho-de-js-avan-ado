@@ -36,9 +36,7 @@ main {
 
 .container {
   width: 60%;
-  /* se for uma tela menor que 980px vai se adaptar a 70% */
   max-width: 960px;
-  /* quando chegar em 980px para de aumentar */
   box-shadow: rgba(0, 0, 0, 0.3) 0px 25px 50px -12px;
   background-color: #fff;
   display: flex;
@@ -123,18 +121,17 @@ main {
   line-height: 23px;
 }
 
-/* REPOSITORIES */
+
 
 .seting {
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 6px;
+  gap: 5vh;
   margin-top: 20px;
-  border-radius: 5px;
-  font-size: 10px;
-
+  border-radius: 10px;
+  font-size: 20px;
 }
 
 .seting li {
